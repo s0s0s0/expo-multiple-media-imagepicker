@@ -71,6 +71,10 @@ export default class ImageBrowser extends React.Component {
       })
     }
 
+    if (displayAssets) {
+      displayAssets= displayAssets.reverse()
+    }
+
     this.setState({
       photos: [...this.state.photos, ...displayAssets],
       after: assets.endCursor,
